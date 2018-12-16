@@ -300,6 +300,53 @@
 				</div>
 			  </li>
 			</ul>
+			
+		<h3>Digital Electronics (2018-2019)</h3>
+          <ul>              
+			  <li class = "projectitem">
+				<div><h4>PLTW Project 1.2.7 PCB Design</h4>
+					<ul>
+						<li>Digital Electronics</li>
+						<li>Development Cycle: 10/09/18 - 10/29/18</li>
+						<li>Project Type: Individual</li>
+					</ul>
+					<a href = "so.pictures/so.pcb.jpg" target="_blank"><img class="projectimg" style = "float:right" src= "so.pictures/so.pcb.jpg"/></a>
+					<div class = "container" style="display:inline">
+						<p> The objective of the project was to manufacture a PCB from ideation to completion. 
+						For my project, I decided to create a casino slot, where the objective of the "game" is to land the roulette on the number 7. 
+						In the corner of the board is an LED which flashes when the display reads "7" to assist the user in establishing a rhythm. 
+						Initially, I wanted to use three 7 Segment Displays to simulate the three slots of a machine, with a victory only when all three slots read "7". 
+						However, due to time constraints, I decided to only create one slot. 
+						After I had finalized my idea, I used Multisim CDS to simulate my circuit and ensure it would function as intended. 
+						Once I tested theoretical functionality, I breadboarded the circuit to ensure that it would work in practice. 
+						I used the Fritzing schematic tool to design my PCB layout with all of the given parts. 
+						Once complete, I used ferric chloride to etch my design onto a copper board, then completed the PCB by boring holes and soldering the components.
+						</p>
+						<br>
+						<p> My final PCB for the casino slot used an NE555 timer to generate a clock signal. 
+						The clock signal was used as input for a bit counter created using 74LS74 flip-flops. 
+						The outputs of the bit counter were wired into a 74LS47 BCD (bit-to-decade) driver and am FND507 common anode display. 
+						A series of AND and NOT gates were used to truncate the bit counter from bits 0 to 9, as well as to flash the LED when the display read "7." 
+						The slot was rolled by holding down the button at the bottom of the PCB.
+						</p>
+						<br>
+						<p>
+						As the only member of my group for the project, I had to manage every step of the project, including prototyping, PCB design, and manufacturing. 
+						There were many challenges during the design process. The most notable one was the design of the PCB itself. 
+						I had 6 different ICs, which meant that there were many connections that needed to be untangled. 
+						When I designed the PCB, I tried to minimize the number of connections by chaining VCC and ground pins together to one common power and ground line. 
+						I was also able to take advantage of the space underneath each IC on the PCB. 
+						I redesigned the PCB a total of 3 times, and managed to reduce the number of jumper wires required from 14 to 9. 
+						The documentation can be found below.
+						</p>
+						<br>
+						<ul>
+							<a target="_blank" href = "https://drive.google.com/open?id=1J9etnisZ55c-_8-3V8n4yDlkfTm_WGv3G3GvWU-03RE"><li>Link to the Project Documentation</li></a>
+							<a target="_blank" href = "https://docs.google.com/document/d/1bU-HQNlfDgSApZDTR4GG02L0m4FhC9DTQqc8-wmMXWY/edit?usp=sharing"><li>Link to the Project Rubric</li></a>
+						</ul>
+					</div>
+				</div>
+			  </li>
       </div>
       </div>
 
