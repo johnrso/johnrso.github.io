@@ -347,7 +347,34 @@
 					</div>
 				</div>
 			  </li>
-      </div>
+              <li class = "projectitem">
+				<div><h4>PLTW Project 2.3.5 PLD Design</h4>
+					<ul>
+						<li>Digital Electronics</li>
+						<li>Development Cycle: 02/25/19 - 03/05/19</li>
+						<li>Project Type: Individual</li>
+					</ul>
+					<a href = "so.pictures/so.breadboard.JPG" target="_blank"><img class="projectimg" style = "float:right" src= "so.pictures/so.breadboard.JPG"/></a>
+                    <a href = "so.pictures/so.sim.PNG" target="_blank"><img class="projectimg" style = "float:right" src= "so.pictures/so.sim.PNG"/></a>
+					<div class = "container" style="display:inline">
+						<p> The objective of the project was to use a Cmod S6 FPGA to cycle a message (maximum of 16 characters) through a 7 Segment Display. 
+						For my project, I decided to display the messsage "bIrdS ArEnt rEAL" to spread awareness of a growing conspiracy that birds are, in fact, government drones used to spy on the public. 
+                        The inputs necessary for the display to function were the four binary bits necessary to represent each unique state (0000 to 1111). The outputs were the 7 pins of the display.
+						I first created the truth table for each pin of the display using standard character definitions for a 7 Segment Display. Then, within the Multisim design tool, I was able to convert the truth tables into logic expressions and logic gates using Multisim's logic converter tool. Instead of using switches to cycle between the characters, I used the Cmod S6's internal clock and ripple counters to create a 4-bit counter and automatically increment between the 16 values. The 4-bit counter was then fed into each pin's logic gates, with the outputs to be wired to the display. Lastly, On the physical breadboard, I wired the Cmod S6's defined outputs to the MyDAQ's built-in displays (wired common cathode).
+						</p>
+						<br>
+						<p>
+						I ran into several problems when programming the FPGA. Notably, I had to make adjustments to utilize the Cmod S6's internal clock correctly to slowly cycle between the values. The internal clock has a frequency in the hundred-kilohertz; thus, to make the message readable, I had to slow down the internal clock. To do this, I used a series of 3 ripple counters to divide the frequency by powers of 2 until the signal was slow enough in frequency. Another issue I had with the ripple counters was the master reset (MR) pin. Through experimentation, I learned that the MR pins needed to be wired into a physical input; a digital constant did not allow the counter to work. To solve this issue, I wired BTN0 into the ripple counters' MR pins, which were daisy-chained. Because the button is normally open (logic LOW) and the MR pins are active HIGH, the counter was able to function normally without constantly resetting the state of the display. An additional bonus of using this method was that BTN0 became a reset button; when pressed, a HIGH was sent to each counter's MR pin, resetting the display back to its first state.    
+						The documentation can be found below.
+						</p>
+						<br>
+						<ul>
+							<a target="_blank" href = "https://docs.google.com/document/d/1d71vXfUNV8gjF3N8zSaMyl3AZ2Tke8cJVEPQE948cmM/edit?usp=sharing"><li>Link to the Project Documentation</li></a>
+							<a target="_blank" href = "https://drive.google.com/open?id=10W917VZ1FxJU97Hv5EAm_G8UDFsPhjhIBOOU1svtHcw"><li>Link to the Project Rubric</li></a>
+						</ul>
+					</div>
+				</div>
+			  </li>
       </div>
 
 		<div class="footer col-md-10">
