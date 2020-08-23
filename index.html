@@ -1,88 +1,403 @@
-<!DOCTYPE html>
-<html>
-	<head>
-        <title>John So's Website</title>
-		<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
-		<link rel='stylesheet' href='so.style.css'/>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-	
-	
-	<body>
-		<div class="header">
-			<div class="container pills">
-				<img src="so.pictures/so.bannerimg.JPG">
-				<h1 style="font-size:30px; display:inline">JOHN SO</h1>
-				<ul class="nav nav-pills pull-right" style="display:inline">
-					<li class="active"><a href="so.home.html">Home</a></li>
-					<li><a href="so.projects.html">Projects</a></li>
-					<li><a href="so.aboutme.html">About Me</a></li>
-					<li><a href="so.resume.html">Work Experience</a></li>
-					<li><a href="so.contact.html">Contact</a></li>
-				</ul>
-			</div>
-		</div>
-		
-		
-		<div class="main">
-			<div class="row">
-				<div class="col-md-4">
-                    <img class="mainpic" src="so.pictures/so.pic1.JPG"/>
-                    <a href="so.projects.html#FLL"><img class="imgcaption" src="so.pictures/so.fllcaption.png"/></a>
-				</div>
-                
-				<div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic2.png"/>
-                    <a href="so.projects.html#programming"><img class="imgcaption" src="so.pictures/so.prgmcaption.png"/></a>
-				</div>
-				
-                <div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic3.JPG"/>
-                    <a href="so.projects.html#VEX"><img class="imgcaption" src="so.pictures/so.vexcaption.png"/></a>
-				</div>
-			</div>
-            
-			<div class="row">
-				<div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic4.jpg"/>
-                    <a href="so.resume.html"> <img class="imgcaption" src="so.pictures/so.resumecaption.png"/></a>
-				</div>
-				
-                <div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic5.jpg"/>
-                    <a href="so.aboutme.html"><img class="imgcaption" src="so.pictures/so.aboutcaption.png"/></a>
-				</div>
-				
-                <div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic6.JPG"/>
-                    <a href="so.aboutme.html#hobbies"><img class="imgcaption" src="so.pictures/so.hobbiescaption.png"/></a>
-				</div>
-			</div>
-            
-			<div class="row">
-				<div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic7.JPG"/>
-                     <a href="so.aboutme.html#hobbies"><img class="imgcaption" src="so.pictures/so.hobbiescaption.png"/></a>
-				</div>
-				
-                <div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic8.JPG"/>
-                    <a href="so.aboutme.html#hobbies"><img class="imgcaption" src="so.pictures/so.hobbiescaption.png"/></a>
-				</div>
-				
-                <div class="col-md-4">
-					<img class="mainpic" src="so.pictures/so.pic9.jpg"/>
-                    <a href="so.aboutme.html#hobbies"><img class="imgcaption" src="so.pictures/so.hobbiescaption.png"/></a>
-				</div>
-			</div>
-		</div>
-		
-		
-		<div class="footer col-md-10">
-            <p style="display:inline">Phone number:999 999 9999</p>
-            <p class="pull-right" style="display:inline">JOHN SO</p>
-            <br>
-            <p style="display:inline">Email:&nbsp;osnhoj@gmail.com</p>
-            <p class="pull-right">&copy;2015-2016</p>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <link rel='icon' href='images/favicon.png' type='image/gif' sizes='any'>
+        <title>john so</title>
+    </head>
+
+    <body data-spy="scroll" data-target="#header" data-offset="0">
+
+    <!------------ HEADER ------------>
+
+        <nav id="header" class="navbar fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src='images/favicon.png' id="h_pic">john so</a>
+            <ul class="nav nav-pills">
+                <!--<li class="nav-item"><a class="nav-link" href="#landing">home</a></li>-->
+                <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proj">projects</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#res">experience</a></li> -->
+            </ul>
+        </nav>
+
+    <!------------ LANDING ------------>
+
+        <div class='container-fluid' id='landing'>
+            <div class='center'>
+                <img src='images/about.png' id='profile'>
+                <h1>my name is john.</h1>
+                <h1>i create.</h1>
+
+                <div id='icons'>
+                    <a href='https://github.com/johnrso' target='_blank'><img class='icon' src='images/icon/github.png'></a>
+                    <a href='mailto:johnianrso@berkeley.edu' target ='_blank'><img class='icon' src='images/icon/email.png'></a>
+                    <a href='media/resume.pdf' target="_blank"><img class='icon' src='images/icon/resume.png'></a>
+                    <a href='https://www.linkedin.com/in/johnianrso/' target ='_blank'><img class='icon' src='images/icon/linkedin.png'></a>
+                </div>
+            </div>
         </div>
-   </body>
+
+    <!------------ ABOUT ------------>
+
+        <div class='container' id="about">
+            <br>
+            <h4>about</h4>
+            <br>
+            <!-- <img src='images/about.png' id='contact'> -->
+            <p>
+                I'm a first year EECS major at UC Berkeley seeking opportunities in computer vision, robotics, and machine learning. I strongly believe that people should put their talents and time towards helping others.
+                I'm also interested in the intersection between technology and social good, including assistive design, accessibility, and STEM education.
+            </p>
+            <p>
+                My technical background is primarily rooted in competitive robotics, with experience in app development and circuit design. I've very familiar with working with sensor data/fusion, machine learning models, circuit analysis, and fast prototyping.
+            </p>
+            <p>
+                Outside of classwork, I'm a course tutor for CS 61A: The Structure and Interpretation of Computer Programs, Berkeley's introductory computer science course. I'm also involved with Formula Electric @ Berkeley, Berkeley's Formula SAE EV team, where I'm
+                designing hardware and firmware for circuit boards. I'm hoping to get involved in undergraduate research this semester.
+            </p>
+
+            <p>Check out what I've made below! Feel free to contact me at <a href = 'mailto:johnianrso@berkeley.edu' target="_blank">johnianrso@berkeley.edu</a> if you have any questions.</p>
+
+            <ul>things I like (other than code):
+                <li>crazy socks</li>
+                <li>rock climbing</li>
+                <li>the outdoors</li>
+                <li>boba tea</li>
+                <li>berkeley</li>
+            </ul>
+        </div>
+
+    <!------------ PROJECTS ------------>
+
+        <div class='container' id="proj">
+            <br>
+            <h4>projects</h4>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="images/projects/mask.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mask Vision</h5>
+                            <h6 class="card-text">August 2020 - Present</h6>
+                            <p>I prepared data and trained a CNN to detect the presence of masks in images using OpenCV and Keras. I'm currently working with YOLO to detect them in real time using Darknet.</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mv">more</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="mv" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Mask Vision</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Under construction!
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="images/projects/wordhunt.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Word Hunt Solver</h5>
+                            <h6 class="card-text">May 2020 - Present</h6>
+                            <p class="card-text">I created a model and solver for one of my favorite games, Word Hunt, using DFS traversal and tries. I'm currently
+                             working on deploying it as a web application using React and Flask.</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wh">more</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="wh" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Word Hunt Solver</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Under construction!
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="images/projects/hocl.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">ecHOClean</h5>
+                            <h6 class="card-text">July - August 2020</h6>
+                            <p class="card-text">For my internship at PhaseSpace Motion Capture, I disassembled a hydrochlorous acid (HClO) generator, wired it and some pumps up to an ESP-32 microcontroller, and created a threaded control system.</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#hocl">more</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="hocl" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">ecHOClean</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Under construction!
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-sm-4">
+                  <div class="card">
+                      <img src="images/projects/rss.png" class="card-img-top">
+                      <div class="card-body">
+                          <h5 class="card-title">Sanitization Robot</h5>
+                          <h6 class="card-text">June - July 2020</h6>
+                          <p class="card-text">I researched and learned ROS to model the operation of a sanitization robot, implementing the software stack in Melodic and simulating sensors and controls in Gazebo.</p>
+
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#srr">more</button>
+
+                          <!-- Modal -->
+                          <div class="modal fade" id="srr" tabindex="-1">
+                              <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title">Sanitization Robot</h5>
+                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                      </div>
+
+                                      <div class="modal-body">
+                                          Under construction!
+                                      </div>
+
+                                      <div class="modal-footer">
+                                          <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="images/projects/dankrobotarm.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Motion Controlled Robotic Arm</h5>
+                            <h6 class="card-text">June - August 2018</h6>
+                            <p>I machined a robotic arm from scratch and created software in Arduino and Java to translate 3D vector space into arm joint angles and translate motion capture data into scaled vectors.</p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#dra">more</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="dra" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Motion Controlled Robotic Arm</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Under construction!
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="images/projects/sdc.png" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Self-Driving Car Simulation</h5>
+                            <h6 class="card-text">September - December 2019</h6>
+                            <p class="card-text">I modelled and implemented self-driving car subsystems such as acceleration control and route planning in Duckietown, OpenCV, and TensorFlow using models for linear regression and neural networks. </p>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sdc">more</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="sdc" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Self-Driving Car Simulation</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            Under construction!
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+                <!--<h5 id='wordhunt'>Word Hunt Solver</h5>
+                <p>January - February 2020</p>
+                <p>Word Hunt is a game on the iOS GamePigeon app, where the objective of the game is to create words on a 4x4 grid, using adjacent letters without repeating a square. Words are scored based on their length; a 3 letter word is worth 300 points, while an 8 letter one is worth 2000.</p>
+                <p>Much of the inspiration behind making this project was finally scoring 50000 points, and wanting to see a superhuman performance. This project uses Python and OpenCV to scan and create boards, generate possible words, and play the game in real time. I modelled the game's mechanics using Python; I used tree data structures to store words as a collection of letters and an online, open-source dictionary file (linked below) to score the words. To generate words, I created vectors containing the percentage of words that contained the letters currently being used.</p>
+                <p>In the future, I want to remake this project using reinforcement learning to possibly optimize the </p>
+
+                <h5 id='mixer'>Mixer</h5>
+                <p>October 2019</p>
+
+                <h5 id='sdc'>Self-Driving Car Simulation</h5>
+                <p>September - December 2019</p>
+
+                <h5 id='pld'>bIrdS ArEnt rEAL (PLD Design)</h5>
+                <p>February - March 2019</p>
+
+                <h5 id='pcb'>7 Timer Game</h5>
+                <p>October 2018</p>
+
+                <h5 id='dra'>Motion Controlled Robotic Arm</h5>
+                <p>June-August 2018</p>
+
+                <h5 id='fa'>Fruit Asteroids</h5>
+                <p>April 2018</p>
+
+                <h5 id='vex'>VRC 2017-2018 Robot Jetstream</h5>
+                <p>June 2017 - April 2018</p>
+
+                <h5 id='pong'>PongBot</h5>
+                <p>May 2017 - May 2018</p>
+
+                <h5 id='comw'>CommunityWatch</h5>
+                <p>March 2017</p>
+
+                <h5 id='irri'>Irribot</h5>
+                <p>May 2016</p>
+            </div> -->
+        </div>
+
+    <!------------ EXPERIENCE ------------>
+
+        <!-- <div class='container' id="res">
+            <br>
+            <h4>experience (cool things i've done)</h4>
+            <p>(link to resume <a href='media/resume.pdf' target='_blank'>here</a>)</p>
+            <div class='container'>
+                <h5>Education</h5>
+                <p>University of Califonia, Berkeley | Spring 2023<br>B.S. Electrical Engineering and Computer Science, College of Engineering | GPA: 4.00</p>
+                <ul>
+                    <li>Completed: Designing Information Devices and Systems, Structure and Interpretation of Computer Programs, Multivariable Calculus, Self-Driving Cars</li>
+                    <li>In Progress: Physics for Scientists and Engineers, Data Structures, Discrete Mathematics and Probability Theory, Social Implications of ComputerTchnology</li>
+                </ul>
+
+                <p>Dublin High School | May 2019<br> | GPA: 4.00</p>
+                <ul>
+                    <li>Completed: Designing Information Devices and Systems, Structure and Interpretation of Computer Programs, Multivariable Calculus, Self-Driving Cars</li>
+                    <li>In Progress: Physics for Scientists and Engineers, Data Structures, Discrete Mathematics and Probability Theory, Social Implications of ComputerTchnology</li>
+                </ul>
+
+                <h5>Skills</h5>
+                <p>HTML/CSS, Python, Java, C, Arduino, NI Multisim, Git, Android Studio, Autodesk Fusion 360, Autodesk EAGLE, OpenCV, TensorFlow, sklearn</p>
+
+                <h5>Organizations</h5>
+                <p>Systems and Controls, Berkeley Hyperloop | Berkeley, CA<br>September 2019 – January 2020</p>
+                <ul>
+                    <li>With a team of 12, designed control systems including remote operation, battery management, state transitions, and sensor integration for Berkeley’s Hyperloop pod for the 2020 SpaceX Hyperloop Competition.</li>
+                    <li>Designed and tested an analog-to-digital PCB with Autodesk EAGLE and NI Multisim to detect spikes in the temperature of the pod. Used NTC thermistors and op-amps to compare analog input voltages to a constant reference voltage.</li>
+                </ul>
+
+                <p>Lead Intern, PhaseSpace Motion Capture | San Leandro, CA<br>June 2018 - August 2018</p>
+                <ul>
+                    <li>Self-studied computer vision; transformed videos, identified contours, and extracted histograms using the OpenCV Python library. Utilized a basic K nearest-neighbor (KNN) machine learning algorithm to detect rudimentary features in images.</li>
+                    <li>Assembled and tuned a MendelMax 3D printer with Arduino firmware and Repetier-Host to print models and props for use with PhaseSpace’s virtual reality (VR) police training simulation that uses PhaseSpace’s real-time motion capture system.</li>
+                </ul>
+
+                <p>Vice President, Gael Force Robotics, Dublin High School | Dublin, CA<br>August 2018 – May 2019</p>
+                <ul>
+                    <li>Reorganized the club’s development program to better accommodate the club’s growth. Wrote and taught curriculum to expose students in the club’s development academy to real world engineering applications.</li>
+                    <li>Oversaw the club’s registration, logistics, and participation at events, including the 2019 VEX Robotics World Championships.</li>
+                    <li>Planned and collaborated with club officers to host 42 VEX Robotics teams at Dublin High’s annual VEX Robotics tournament.</li>
+                </ul>
+
+                <p>VEX Robotics 5327B Team Captain, Gael Force Robotics, Dublin High School | Dublin, CA<br>August 2017 – May 2018</p>
+                <ul>
+                    <li>Led team in designing a differential drive system, a passive poly-carbonate claw, and a pneumatic-actuated translational system to maximize limited motor power for the 2017-2018 VEX Robotics Competition In the Zone.</li>
+                    <li>Managed and mentored a team of two freshmen, five sophomores, two juniors, and two seniors on effective robot design and build for the VEX Robotics competitions. Maintained the team’s documentation and robot to be presented at competitions.</li>
+                    <li>Created 15-second autonomous software programs written in RobotC for the robot to perform in self driving mode at VEX Robotics competitions. Programmed and controlled the robot during driver control period through user control loops.</li>
+                </ul>
+            </div>
+        </div>
+
+        <br>
+        <div class='container'>
+        </div> -->
+
+    <!------------ FOOTER ------------>
+
+        <div class='bg-light container-fluid' id='footer'>
+            <p>johnianrso@berkeley.edu
+            &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;
+            (925) 336-7553
+            &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;
+            2016-2020</p>
+
+            <div class='eecs'>
+                <a href='https://eecs.berkeley.edu/' target='_blank'><img class='icon' src='images/EECS.jpg'></a>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
 </html>
