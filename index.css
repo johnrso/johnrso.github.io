@@ -78,15 +78,6 @@ a:hover { text-decoration: underline;}
   padding: 20px;
 }
 
-/* index */
-.title {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-  justify-content: center;
-  width: 100%;
-}
-
 .title-text {
   margin-top: 5px;
 }
@@ -137,7 +128,7 @@ a:hover { text-decoration: underline;}
 .project-media {
   margin: 0 20px 10px 0;
   width: 100%;
-  max-width: 125px;
+  max-width: 150px;
 }
 
 .project-media * {
