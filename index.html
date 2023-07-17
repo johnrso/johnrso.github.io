@@ -4,21 +4,29 @@ title: john so
 ---
 
 <div class="section">
-  <div class="text-container">
-    <h1 class="title">john so</h1>
-    <p>
-      johnianrso &lt;at&gt; berkeley &lt;dot&gt; edu<br>
-      <a target="_blank" href="https://github.com/johnrso">github</a> |
-      <a target="_blank" href="https://twitter.com/johnrso_">twitter</a> |
-      <a target="_blank" href="https://www.linkedin.com/in/johnianrso/">linkedin</a> |
-      <a target="_blank" href="/media/pdf/johnso_2023.pdf">resume</a>
-    </p>
+  <div class="project">
+    <button onclick="dark()">
+      <div class="title-img">
+          <img src="/media/img/headshot.jpeg" alt="me!">
+          <script>
+            function dark() {
+              let element = document.body;
+              element.classList.toggle("dark");
+            }
+            </script>
+      </div>
+    </button>
+    <div class="text-container title-text">
+      <h1>john so</h1>
+      <p><i>johnianrso &lt;at&gt; berkeley &lt;dot&gt; edu</i></p>
+      <p> &#123;
+        <a target="_blank" href="https://github.com/johnrso">github</a> |
+        <a target="_blank" href="https://twitter.com/johnrso_">twitter</a> |
+        <a target="_blank" href="https://www.linkedin.com/in/johnianrso/">linkedin</a> |
+        <a target="_blank" href="/media/pdf/johnso_2023.pdf">resume</a>
+      &#125; </p>
+    </div>
   </div>
-  <div class="title-img">
-    <img src="/media/img/headshot.jpeg" alt="me!">
-  </div>
-</div>
-<div class="section">
   <div class="text-container">
     <p>
       I am an incoming MS CS student at <a target="_blank" href="https://www.stanford.edu/">Stanford</a>; this past year,
@@ -38,13 +46,6 @@ title: john so
 <div class="section">
   <h2>publications</h2>
   <div class="project">
-    <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/">
-      <div class="project-media">
-        <video src="/media/vid/spawnnet.mp4" autoplay muted inline loop>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </a>
     <div class="text-container">
       <h3>SpawnNet: Learning Generalizable Visuomotor Skills from Pre-trained Networks</h3>
       <p>
@@ -67,15 +68,15 @@ title: john so
         <a target="_blank" href="https://github.com/johnrso/spawnnet">code</a>
       </p>
     </div>
-  </div>
-  <div class="project">
-    <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home">
+    <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/">
       <div class="project-media">
-        <video src="/media/vid/sim2seg.mp4" autoplay muted inline loop>
+        <video src="/media/vid/spawnnet.mp4" autoplay muted inline loop>
           Your browser does not support the video tag.
         </video>
       </div>
     </a>
+  </div>
+  <div class="project">
     <div class="text-container">
       <h3>Sim-to-Real via Sim-to-Seg: End-to-end Off-road Autonomous Driving Without Real Data</h3>
       <p>
@@ -89,7 +90,7 @@ title: john so
         <a target="_blank" href="https://stepjam.github.io/" >Stephen James</a>
       </p>
       <p>
-        We use simulation to learn a segmentation model and train a navigation policy with RL in segmentation space.
+        We use photorealistic simulation to learn a segmentation model and train a navigation policy with RL in the learned segmentation space.
         We deploy zero-shot to a real vehicle.
       </p>
       <p>
@@ -100,6 +101,13 @@ title: john so
         <a target="_blank" href="https://github.com/rll-research/sim2seg">code</a>
       </p>
     </div>
+    <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home">
+      <div class="project-media">
+        <video src="/media/vid/sim2seg.mp4" autoplay muted inline loop>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </a>
   </div>
 </div>
 <div class="section">
@@ -142,5 +150,5 @@ title: john so
 </div>
 
 <div class="section footer">
-  <p>last updated: {{ site.time | date_to_string }} | <a href="#">top</a></p>
+  <p>last updated: {{ site.time | date_to_string }} | <a href="#">&#128640;</a></p>
 </div>
