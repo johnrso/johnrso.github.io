@@ -69,32 +69,12 @@ a:hover { text-decoration: underline;}
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 0 10px;
 }
 
 .flex-container {
   width: 100%;
   max-width: 800px;
   padding: 20px;
-}
-
-.title-text {
-  margin-top: 5px;
-}
-
-.title-img {
-  flex: 1;
-}
-
-.title-img * {
-  border-radius: 3px;
-  height: 75px;
-  width: 75px;
-  border: 1px solid #ddd;
-}
-
-.dark .title-img * {
-  border: 1px solid rgb(50, 50, 50);
 }
 
 .text-container {
@@ -106,7 +86,7 @@ a:hover { text-decoration: underline;}
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
-  margin-bottom: 10px;
+  margin:10px;
 }
 
 .section {
@@ -115,18 +95,47 @@ a:hover { text-decoration: underline;}
   margin-top: 15px;
 }
 
-.project {
+.subsection {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
   justify-content: center;
   width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+}
+
+/* heading and footer */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: right;
+  margin-bottom: 15px;
+}
+
+.title-text {
+  margin-top: 5px;
+}
+
+/* media */
+
+.title-img {
+  height: 75px;
+  width: 75px;
+}
+
+.title-img * {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.dark .title-img * {
+  border: 1px solid rgb(50, 50, 50);
 }
 
 .project-media {
-  margin: 0 20px 10px 0;
+  margin: 10px;
   width: 100%;
   max-width: 150px;
 }
@@ -136,13 +145,7 @@ a:hover { text-decoration: underline;}
   width: 100%;
 }
 
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: right;
-  margin-bottom: 35px;
-}
+/* papers */
 
 .badge {
   display: inline-block;
