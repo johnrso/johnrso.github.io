@@ -101,6 +101,7 @@ a:hover { text-decoration: underline;}
   flex-direction: row-reverse;
   justify-content: center;
   width: 100%;
+  margin-bottom: 5px;
 }
 
 /* heading and footer */
