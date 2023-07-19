@@ -166,11 +166,3 @@ a:hover { text-decoration: underline;}
 .dark .conference {
   background-color: rgb(33, 61, 90);
 }
-
-.arxiv {
-  background-color: #e8e8e8;
-}
-
-.dark .arxiv {
-  background-color: #323232;
-}
