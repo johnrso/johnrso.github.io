@@ -58,7 +58,7 @@ a {
 
 .dark a {
   /* lighter blue */
-  color: rgb(0, 83, 208);
+  color: rgb(146, 174, 227);
 }
 
 a:hover { text-decoration: underline;}
