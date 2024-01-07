@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   line-height: 1.25;
+  font-size: 14px;
 }
 
 body {
@@ -41,9 +42,19 @@ h3 {
 }
 
 p {
-  font-size: 14px;
   color: rgb(175, 175, 175);
-  margin: 3px 0 0px 0;
+  margin: 0px 0 0px 0;
+}
+
+/* reduce the left margin of lists */
+ol, ul {
+  padding-left: 20px; /* Adjust the value as needed */
+  color: rgb(175, 175, 175);
+}
+
+li {
+  margin: 0;
+  color: rgb(175, 175, 175);
 }
 
 .light p {
