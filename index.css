@@ -61,6 +61,14 @@ li {
   color: #555;
 }
 
+.light ol, .light ul {
+  color: #555;
+}
+
+.light li {
+  color: #555;
+}
+
 a {
   font-size: 14px;
   color: rgb(146, 174, 227);
