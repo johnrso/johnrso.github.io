@@ -4,10 +4,11 @@ layout: default
 <div class="text-container">
 
   <h2>{{ page.title }}</h2>
-  <p>{{ page.last_modified_at | date: "%B %d, %Y" }}</p>
+  <p>{{ page.date | date_to_string }}</p>
+  <p>keywords: {{ page.keywords }}</p>
+  <p>back to <a href="/blog.html">blog</a></p>
   <hr>
   {{ content }}
-  <hr>
   <br>
-  <p>back to <a href="/blog.html">blog</a></p>
+  <p><a href="#">top</a>; back to <a href="/blog.html">blog</a></p>
 </div>
