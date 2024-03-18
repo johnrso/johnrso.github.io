@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "one hour thoughts"
-keywords: burnout, stanford, berkeley, mindset
+keywords: burnout, mindset, stanford, berkeley
 date:   2024-03-17 13:32:03 -0700
 categories: jekyll update
 
