@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: blog
 title: joso journal
 ---
 
@@ -12,7 +12,7 @@ title: joso journal
   </div>
 </div>
 <div class="text-container">
-  <p>A very informal collection of things I've made and thoughts I've thought:</p>
+  <p>A very informal collection of things I've made and thoughts I've thought.</p>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>

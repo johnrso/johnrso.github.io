@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  line-height: 1.25;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 body {
@@ -27,17 +27,17 @@ button {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 22px;
   margin: 0;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -80,7 +80,6 @@ li {
 }
 
 a {
-  font-size: 14px;
   color: rgb(146, 174, 227);
   text-decoration: none;
 }
@@ -102,7 +101,7 @@ a:hover { text-decoration: underline;}
 
 .flex-container {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   padding: 20px;
 }
 
