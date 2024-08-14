@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  line-height: 1.25;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 body {
@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   font-weight: 300;
 }
@@ -169,8 +169,9 @@ a:hover { text-decoration: underline;}
 
 .project-media {
   margin: 10px;
+  margin-top: 20px;
   width: 100%;
-  max-width: 150px;
+  max-width: 175px;
 }
 
 .project-media * {
