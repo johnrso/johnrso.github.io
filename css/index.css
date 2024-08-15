@@ -2,8 +2,7 @@
 
 * {
   box-sizing: border-box;
-  line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
@@ -34,18 +33,21 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
   margin: 0;
   font-weight: 400;
 }
 
 h3 {
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: 16px;
   margin: 0;
-  font-weight: 300;
+  margin-bottom: 2px;
+  font-weight: 400;
 }
 
 p {
+  line-height: 1.5;
   color: rgb(175, 175, 175);
   margin: 0px 0 2px 0;
 }
@@ -67,6 +69,7 @@ ol, ul {
 }
 
 li {
+  line-height: 1.5;
   margin: 0;
   color: rgb(175, 175, 175);
 }
@@ -153,8 +156,8 @@ a:hover { text-decoration: underline;}
 /* media */
 
 .title-img {
-  height: 75px;
-  width: 75px;
+  height: 85px;
+  width: 85px;
 }
 
 .title-img * {
@@ -169,22 +172,28 @@ a:hover { text-decoration: underline;}
 
 .project-media {
   margin: 10px;
-  margin-top: 20px;
   width: 100%;
-  max-width: 175px;
+  max-width: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-media * {
   border-radius: 3px;
   width: 100%;
+  margin:auto;
+  margin-top: 2px;
 }
 
 /* papers */
 
 .badge {
   display: inline-block;
-  padding: 0.25em 0.4em;
+  padding: 0.1em 0.4em;
   margin-right: 5px;
+  margin-top: 4px;
   font-size: 80%;
   text-align: center;
   white-space: nowrap;
