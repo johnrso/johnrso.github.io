@@ -2,8 +2,7 @@
 
 * {
   box-sizing: border-box;
-  line-height: 1.5;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background-color: rgb(30, 30, 30);
+  background-color: rgb(20, 20, 20);
   color: rgb(200, 200, 200);
 }
 
@@ -23,29 +22,33 @@ button {
 }
 
 .light {
-  background-color: rgb(245, 245, 245);
-  color: #333;
+  background-color: rgb(230, 230, 230);
+  color: rgb(20, 20, 20);
 }
 
 h1 {
-  font-size: 26px;
+  line-height: 1.5;
+  font-size: 24px;
   margin: 0;
   font-weight: 400;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 h3 {
-  font-size: 18px;
+  line-height: 1.5;
+  font-size: 16px;
   margin: 0;
-  font-weight: 300;
+  margin-bottom: 2px;
+  font-weight: 400;
 }
 
 p {
+  line-height: 1.5;
   color: rgb(190, 190, 190);
   margin: 0px 0 2px 0;
 }
@@ -62,13 +65,20 @@ hr {
 
 /* reduce the left margin of lists */
 ol, ul {
+  line-height: 1.5;
   padding-left: 20px; /* Adjust the value as needed */
   color: rgb(190, 190, 190);
 }
 
 li {
+  line-height: 1.5;
   margin: 0;
   color: rgb(190, 190, 190);
+}
+
+a {
+  color: rgb(146, 174, 255);
+  text-decoration: none;
 }
 
 .light p {
@@ -81,11 +91,6 @@ li {
 
 .light li {
   color: #222;
-}
-
-a {
-  color: rgb(146, 174, 255);
-  text-decoration: none;
 }
 
 .light a {
@@ -153,8 +158,8 @@ a:hover { text-decoration: underline;}
 /* media */
 
 .title-img {
-  height: 75px;
-  width: 75px;
+  height: 85px;
+  width: 85px;
 }
 
 .title-img * {
@@ -170,31 +175,48 @@ a:hover { text-decoration: underline;}
 .project-media {
   margin: 10px;
   width: 100%;
-  max-width: 150px;
+  max-width: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-media * {
   border-radius: 3px;
   width: 100%;
+  margin:auto;
+  margin-top: 3px;
 }
 
 /* papers */
 
 .badge {
   display: inline-block;
-  padding: 0.25em 0.4em;
+  padding: 4px 8px;
+  margin-top: 4px;
   margin-right: 5px;
-  font-size: 80%;
+  font-size: 0.85em;
+  font-weight: 300;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
-  border-radius: 5px;
   vertical-align: baseline;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
-.conference {
-  background-color: rgb(33, 61, 90);
+.badge.conference {
+  color: #f0f0f0;
+  background-color: #6c7a89;
 }
 
-.light .conference {
-  background-color: rgb(210, 222, 235);
+.light .badge.conference {
+  color: #2c3e50;
+  background-color: #d5d8dc;
+}
+
+.badge:hover {
+  opacity: 0.9;
+  user-select: none;
 }
