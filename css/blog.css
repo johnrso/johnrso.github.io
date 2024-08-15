@@ -46,7 +46,7 @@ h3 {
 }
 
 p {
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
   margin: 0px 0 2px 0;
 }
 
@@ -63,28 +63,28 @@ hr {
 /* reduce the left margin of lists */
 ol, ul {
   padding-left: 20px; /* Adjust the value as needed */
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
 }
 
 li {
   margin: 0;
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
 }
 
 .light p {
-  color: #555;
+  color: #222;
 }
 
 .light ol, .light ul {
-  color: #555;
+  color: #222;
 }
 
 .light li {
-  color: #555;
+  color: #222;
 }
 
 a {
-  color: rgb(146, 174, 227);
+  color: rgb(146, 174, 255);
   text-decoration: none;
 }
 
