@@ -27,6 +27,7 @@ button {
 }
 
 h1 {
+  line-height: 1.5;
   font-size: 24px;
   margin: 0;
   font-weight: 400;
@@ -48,46 +49,37 @@ h3 {
 
 p {
   line-height: 1.5;
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
   margin: 0px 0 2px 0;
-}
-
-hr {
-  border-color: rgb(125, 125, 125);
-  width: 100%;
-  margin: 20px 0 20px 0;
-}
-
-.light hr {
-  border-color: #ddd;
 }
 
 /* reduce the left margin of lists */
 ol, ul {
+  line-height: 1.5;
   padding-left: 20px; /* Adjust the value as needed */
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
 }
 
 li {
   line-height: 1.5;
   margin: 0;
-  color: rgb(175, 175, 175);
+  color: rgb(190, 190, 190);
 }
 
 .light p {
-  color: #555;
+  color: #222;
 }
 
 .light ol, .light ul {
-  color: #555;
+  color: #222;
 }
 
 .light li {
-  color: #555;
+  color: #222;
 }
 
 a {
-  color: rgb(146, 174, 227);
+  color: rgb(146, 174, 255);
   text-decoration: none;
 }
 
@@ -184,7 +176,7 @@ a:hover { text-decoration: underline;}
   border-radius: 3px;
   width: 100%;
   margin:auto;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 /* papers */
@@ -202,7 +194,7 @@ a:hover { text-decoration: underline;}
 }
 
 .conference {
-  background-color: rgb(33, 61, 90);
+  background-color: rgb(14, 57, 103);
 }
 
 .light .conference {
