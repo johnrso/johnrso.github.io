@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "one hour thoughts"
+title:  "one hour thoughts on purpose"
 keywords: burnout, mindset
 date:   2024-03-17 13:32:03 -0700
 categories: jekyll update

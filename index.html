@@ -5,9 +5,9 @@ title: joso
 
 <div class="section">
   <div class="subsection">
-    <button onclick="dark()">
+    <button onclick="dark()" aria-label="Toggle dark mode">
       <div class="title-img">
-          <img src="/media/img/headshot.jpeg" alt="me!">
+          <img src="/media/img/headshot.jpeg" alt="Headshot of John So">
           <script>
             function dark() {
               let element = document.body;
@@ -18,7 +18,7 @@ title: joso
     </button>
     <div class="text-container title-text">
       <h1>john so</h1>
-      <p><i>johnso &lt;at&gt; stanford &lt;dot&gt; edu</i></p>
+      <p><i>[first and last name backwards] &lt;at&gt; gmail &lt;dot&gt; com</i></p>
       <p> &#123;
         <!-- <a target="_blank" href="/media/pdf/johnso_2023.pdf">resume</a> | -->
         <a target="_blank" href="https://github.com/johnrso">github</a> |
@@ -31,17 +31,16 @@ title: joso
   </div>
   <div class="text-container">
     <p>
-      I am an MS CS at <a target="_blank" href="https://www.stanford.edu/">Stanford University</a>, where I'm fortunate to be advised by
-      <a target="_blank" href="https://shurans.github.io/">Shuran Song</a> as a member of Stanford <a target="_blank" href="https://real.stanford.edu/">REAL</a> (Robotics and Embodied Artificial Intelligence Lab).
-    </p>
-    <br>
-    <p>
-      I received my BS EECS from <a target="_blank" href="https://engineering.berkeley.edu/">UC Berkeley</a>, where I was advised by
+      I received my MS CS at <a target="_blank" href="https://www.stanford.edu/">Stanford University</a>, where I was fortunate to be advised by
+      <a target="_blank" href="https://shurans.github.io/">Shuran Song</a> as a member of Stanford <a target="_blank" href="https://real.stanford.edu/">REAL</a> (Robotics and Embodied Artificial Intelligence Lab), and my BS EECS from <a target="_blank" href="https://engineering.berkeley.edu/">UC Berkeley</a>, where I was advised by
       <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>,
       <a target="_blank" href="https://stepjam.github.io/">Stephen James</a>, and
       <a target="_blank" href="https://xingyu-lin.github.io/">Xingyu Lin</a> as a part of Berkeley
       <a target="_blank" href="https://rll.berkeley.edu/">RLL</a> (Robot Learning Lab).
-      I most recently spent time as an AI Resident at <a target="_blank" href="https://www.1x.tech/about">1X</a>, where I focused on training foundation policy models for humanoid robots.
+    </p>
+    <br>
+    <p>
+      Previously, I was an intern at <a target="_blank" href="https://www.tesla.com/en_eu/AI">Tesla Optimus</a>, where I focused on policy learning from non-embodied data. I also spent time as an AI resident at <a target="_blank" href="https://www.1x.tech/about">1X</a>, where I focused on data and training foundation policy models.
     </p>
   </div>
 </div>
@@ -52,14 +51,14 @@ title: joso
   <div class="subsection">
     <div class="text-container">
       <p>
-        My dream is for robots to become an everyday household occurrence; an important step is to enable robots to quickly adapt prior knowledge to new scenes or tasks. Towards this, I aim to answer two questions:
+        My dream is for robots to become an everyday household occurrence—to quickly adapt prior knowledge to new scenes and tasks. I believe that large scale data is fundamental to bridging this gap between control and robust generalization. Towards this, I aim to answer the following questions:
       </p>
       <ol>
-        <li>How do we pre-train using out-of-distribution data, such as cross-embodiment and actionless data?</li>
-        <li>How do we scale in-domain data collection to pre-train multi-task and generalizable policies?</li>
+        <li><strong>Generalization</strong>: How do we elicit knowledge from pre-trained models to enable robust generalization? How do we ground pre-trained representations for robotic control?</li>
+        <li><strong>Data</strong>: How can we obtain control supervision from non-embodied data, such as human videos and simulation? How do we scale, curate, and augment embodied data?</li>
       </ol>
       <p>
-        My recent interests are in capturing useful priors from large unstructured datasets for robot learning, such as motion and skills. Long term, I hope to leverage perspectives from cognitive science to inform how robots can learn from and like humans.
+        Long term, I hope to leverage perspectives from cognitive science to inform how robots can learn from and like humans.
       </p>
     </div>
   </div>
@@ -76,7 +75,7 @@ title: joso
         <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
       </p>
       <p>
-        We learn to generate trajectories of arbitrary points from large actionless video datasets and condition a policy on these learned point trajectories, enabling sample-efficient policy learning and positive cross-embodiment transfer.
+        We condition a policy on point trajectories learned from actionless videos, enabling sample-efficient policy learning and positive cross-embodiment transfer.
       </p>
       <p>
         <span class="badge conference"><b>RSS 2024</b></span>
@@ -162,10 +161,10 @@ title: joso
   </div>
   <div class="subsection">
     <div class="text-container">
+      <p><a target="_blank" href="https://cs229.stanford.edu/">CS 229: Machine Learning</a> — Winter 2024, Winter 2025</p>
       <p><a target="_blank" href="https://cs221.stanford.edu/">CS 221: Artificial Intelligence: Principles and Techniques</a> — Fall 2024</p>
-      <p><a target="_blank" href="https://cs229.stanford.edu/">CS 229: Machine Learning</a> — Winter 2024</p>
       <p><a target="_blank" href="https://people.eecs.berkeley.edu/~jrs/189/">CS 189: Introduction to Machine Learning</a> — Spring 2023</p>
-      <p><a target="_blank" href="https://cs61a.org/">CS 61A: Structure and Interpretation of Computer Programs</a> — Fall 2022, Spring 2022 (Head TA), Fall 2021</p>
+      <p><a target="_blank" href="https://cs61a.org/">CS 61A: Structure and Interpretation of Computer Programs</a> — Fall 2022, Spring 2022, Fall 2021</p>
     </div>
   </div>
 </div>
@@ -184,7 +183,7 @@ title: joso
       </p>
       <br>
       <p>
-        I like to think about how to best teach, learn, and optimize for fulfillment. Shoot me an email or DM if you'd like to chat :&#41;
+        I'm forever grateful to the communities which raised me: <a target="_blank" href="https://ml.berkeley.edu/">ML@B</a>, <a target="_blank" href="https://csmentors.studentorg.berkeley.edu/">CSM</a>, <a target="_blank" href="https://eecs.berkeley.edu/resources/undergrads/accel/">Accel Scholars</a>, and <a target="_blank" href="https://www.felicis.com/fellows">Felicis Fellows</a>.
       </p>
     </div>
   </div>
