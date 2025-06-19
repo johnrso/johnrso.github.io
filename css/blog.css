@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
   font-size: 18px;
+  line-height: 1.3;
 }
 
 body {
@@ -10,8 +11,9 @@ body {
   padding: 0;
   font-family: 'EB Garamond', 'Garamond', serif;
   font-weight: 400;
-  background-color: rgb(20, 20, 20);
-  color: rgb(200, 200, 200);
+  background-color: rgb(26, 24, 24);
+  color: rgb(205, 205, 202);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button {
@@ -19,94 +21,132 @@ button {
   cursor: pointer;
   appearance: none;
   background-color: inherit;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 .light {
-  background-color: rgb(250, 248, 240);
+  background-color: rgb(255, 255, 250);
   color: rgb(20, 20, 20);
 }
 
 h1 {
-  line-height: 1.4;
   font-size: 30px;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   font-size: 24px;
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
-  line-height: 1.4;
   font-size: 20px;
-  margin: 0;
-  margin-bottom: 2px;
-  font-weight: 400;
+  margin-top: -7px;
+  font-weight: 500;
 }
 
-p {
-  line-height: 1.4;
-  color: rgb(190, 190, 190);
-  margin: 0px 0 2px 0;
+h2 hr {
+  flex-grow: 1;
+  margin-left: 12px;
+  height: 1px;
+  background-color: rgb(205, 205, 202);
+  border: none;
 }
 
-hr {
-  border-color: rgb(125, 125, 125);
-  width: 100%;
-  margin: 20px 0 20px 0;
+p, ol, ul {
+  margin: 0px 0 12px 0;
+  color: inherit;
 }
 
-.light hr {
-  border-color: #ddd;
+.project-text p {
+  margin: 0 0 2px 0;
+}
+.project-text h3 {
+  margin: -5px 0 2px 0;
 }
 
-/* reduce the left margin of lists */
+.title-text p {
+  margin: 0 0 2px 0;
+}
+
+.last-p {
+  margin-bottom: 0;
+}
+
 ol, ul {
-  line-height: 1.4;
-  padding-left: 20px; /* Adjust the value as needed */
-  color: rgb(190, 190, 190);
-}
-
-li {
-  line-height: 1.4;
-  margin: 0;
-  color: rgb(190, 190, 190);
+  padding-left: 20px;
 }
 
 a {
-  color: rgb(146, 174, 255);
+  color: rgb(150, 185, 150);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:not(.no-hover)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: rgb(150, 185, 150);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease;
+}
+
+a:not(.no-hover):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.no-hover {
   text-decoration: none;
 }
 
+.no-hover:hover {
+  text-decoration: none;
+}
+
+.no-hover::after {
+  display: none;
+}
+
+.no-hover:hover::after {
+  display: none;
+}
+
 a:visited {
-  color: rgb(110, 130, 200);
+  color: rgb(150, 185, 150);
 }
 
 b, strong {
   font-weight: 500;
 }
 
-.light p {
-  color: #222;
-}
-
-.light ol, .light ul {
-  color: #222;
-}
-
-.light li {
-  color: #222;
+.light p, .light ol, .light ul, .light li, .light h1, .light h2, .light h3 {
+  color: inherit;
 }
 
 .light a {
-  /* lighter blue */
-  color: rgb(0, 0, 170);
+  color: rgb(20, 120, 20);
 }
 
-a:hover { text-decoration: underline;}
+.light a:visited {
+  color: rgb(10, 100, 10);
+}
 
 /* layout */
 
@@ -118,7 +158,7 @@ a:hover { text-decoration: underline;}
 
 .flex-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   padding: 20px;
 }
 
@@ -159,6 +199,10 @@ a:hover { text-decoration: underline;}
   margin-bottom: 15px;
 }
 
+.footer a {
+  margin-left: 8px;
+}
+
 .title-text {
   margin-top: 5px;
 }
@@ -166,18 +210,13 @@ a:hover { text-decoration: underline;}
 /* media */
 
 .title-img {
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
 }
 
-.title-img * {
+.title-img img {
   width: 100%;
   border-radius: 3px;
-  border: 1px solid rgb(50, 50, 50);
-}
-
-.light .title-img * {
-  border: 1px solid #ddd;
 }
 
 .project-media {
@@ -188,45 +227,44 @@ a:hover { text-decoration: underline;}
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 6px;
+  border: 0.5px solid rgb(60, 60, 60);
 }
 
-.project-media * {
-  border-radius: 3px;
+.project-media img,
+.project-media video {
+  border-radius: 6px;
   width: 100%;
-  margin:auto;
-  margin-top: 3px;
+}
+
+.light .project-media {
+  border: 0.5px solid rgb(200, 200, 200);
 }
 
 /* papers */
 
 .badge {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 0px 8px;
+  line-height: 1;
   margin-top: 4px;
   margin-right: 5px;
   font-size: 0.85em;
   font-weight: 300;
-  line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 4px;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 
 .badge.conference {
-  color: #f0f0f0;
-  background-color: #6c7a89;
+  background-color: rgb(0, 100, 0);
+  color: rgb(150, 185, 150);
 }
 
 .light .badge.conference {
-  color: #2c3e50;
-  background-color: #d5d8dc;
-}
-
-.badge:hover {
-  opacity: 0.9;
-  user-select: none;
+  background-color: rgb(150, 185, 150);
+  color: rgb(0, 100, 0);
 }
 
 /* blog list formatting */
@@ -238,15 +276,25 @@ a:hover { text-decoration: underline;}
 }
 
 .posts li {
-  margin-bottom: 6px;
+  margin-bottom: 2px;
   display: flex;
   align-items: baseline;
   gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.posts li:hover {
+  transform: translateX(4px);
 }
 
 .posts li span {
   font-size: 14px;
   color: rgb(125, 125, 125);
+  transition: color 0.2s ease;
+}
+
+.posts li:hover span {
+  color: rgb(150, 150, 150);
 }
 
 .posts li a {
@@ -260,4 +308,8 @@ a:hover { text-decoration: underline;}
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+}
+
+.light h1, .light h2 {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }

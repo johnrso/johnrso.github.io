@@ -7,7 +7,7 @@ title: joso
   <div class="subsection">
     <button onclick="dark()" aria-label="Toggle dark mode">
       <div class="title-img">
-          <img src="/media/img/headshot.jpeg" alt="Headshot of John So">
+          <img src="/media/img/headshot.jpg" alt="Headshot of John So">
           <script>
             function dark() {
               let element = document.body;
@@ -18,13 +18,14 @@ title: joso
     </button>
     <div class="text-container title-text">
       <h1>john so</h1>
-      <p><i>[first and last name backwards] &lt;at&gt; gmail &lt;dot&gt; com</i></p>
+      <p><i>aspiring full-stack roboticist!</i></p>
+      <p>[johnso backwards] &lt;at&gt; gmail &lt;dot&gt; com</p>
       <p> &#123;
-        <!-- <a target="_blank" href="/media/pdf/johnso_2023.pdf">resume</a> | -->
-        <a target="_blank" href="https://github.com/johnrso">github</a> |
-        <a target="_blank" href="https://twitter.com/johnrso_">twitter</a> |
-        <a target="_blank" href="https://www.linkedin.com/in/johnianrso/">linkedin</a> |
-        <a target="_blank" href="/media/pdf/johnso_2024.pdf">cv</a> |
+        <!-- <a target="_blank" href="/media/pdf/johnso_2023.pdf">resume</a>, -->
+        <a target="_blank" href="https://twitter.com/johnrso_">twitter</a>,
+        <a target="_blank" href="https://www.linkedin.com/in/johnianrso/">linkedin</a>,
+        <a target="_blank" href="https://github.com/johnrso">github</a>,
+        <!-- <a target="_blank" href="/media/pdf/johnso_2024.pdf">cv</a>, -->
         <a target="_blank" href="https://scholar.google.com/citations?user=r0vGtTwAAAAJ">scholar</a>
       &#125; </p>
     </div>
@@ -38,9 +39,8 @@ title: joso
       <a target="_blank" href="https://xingyu-lin.github.io/">Xingyu Lin</a> as a part of Berkeley
       <a target="_blank" href="https://rll.berkeley.edu/">RLL</a> (Robot Learning Lab).
     </p>
-    <br>
-    <p>
-      Previously, I was an intern at <a target="_blank" href="https://www.tesla.com/en_eu/AI">Tesla Optimus</a>, where I focused on policy learning from non-embodied data. I also spent time as an AI resident at <a target="_blank" href="https://www.1x.tech/about">1X</a>, where I focused on data and training foundation policy models.
+    <p class="last-p">
+      I previously spent time as an intern at <a target="_blank" href="https://www.tesla.com/en_eu/AI">Tesla Optimus</a>, where I focused on policy learning from non-embodied data, and as an AI resident at <a target="_blank" href="https://www.1x.tech/about">1X</a>, where I focused on data and training foundation policy models.
     </p>
   </div>
 </div>
@@ -51,19 +51,19 @@ title: joso
   <div class="subsection">
     <div class="text-container">
       <p>
-        My dream is for robots to become an everyday household occurrence—to quickly adapt prior knowledge to new scenes and tasks. I believe that large scale data is fundamental to bridging this gap between control and robust generalization. Towards this, I aim to answer the following questions:
+        My dream is for robots to become an everyday household occurrence, and I believe that <strong>large scale data</strong> is fundamental to bridge this gap between dexterity and robust generalization to unseen scenarios. My recent interests include:
       </p>
       <ol>
-        <li><strong>Generalization</strong>: How do we elicit knowledge from pre-trained models to enable robust generalization? How do we ground pre-trained representations for robotic control?</li>
-        <li><strong>Data</strong>: How can we obtain control supervision from non-embodied data, such as human videos and simulation? How do we scale, curate, and augment embodied data?</li>
+        <li><strong>Generalization</strong>: How do we elicit task knowledge from pre-trained models via prompting and conditioning? How do we ground pre-trained internet representations for robotic control?</li>
+        <li><strong>Data</strong>: How can we learn priors for control and skills from non-embodied data, such as human videos and simulation? How do we scale, curate, and augment embodied data?</li>
       </ol>
-      <p>
-        Long term, I hope to leverage perspectives from cognitive science to inform how robots can learn from and like humans.
+      <p class="last-p">
+        Long term, I hope to leverage perspectives from cognitive science and developmental psychology to inform how robots can learn from and like humans.
       </p>
     </div>
   </div>
   <div class="subsection">
-    <div class="text-container">
+    <div class="text-container project-text">
       <h3>Any-point Trajectory Modeling for Policy Learning</h3>
       <p>
         <a target="_blank" href="https://alvinwen428.github.io/">Chuan Wen</a>*,
@@ -75,26 +75,24 @@ title: joso
         <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
       </p>
       <p>
-        We condition a policy on point trajectories learned from actionless videos, enabling sample-efficient policy learning and positive cross-embodiment transfer.
+        <strong>TL;DR:</strong> We condition a policy on arbitrary point trajectories learned from actionless videos, enabling sample-efficient policy learning and positive cross-embodiment transfer.
       </p>
       <p>
         <span class="badge conference"><b>RSS 2024</b></span>
-        &#123; <a target="_blank" href="/media/pdf/atm.pdf">paper</a> |
-        <a target="_blank" href="https://arxiv.org/abs/2401.00025" >arXiv</a> |
-        <a target="_blank" href="https://xingyu-lin.github.io/atm/">website</a> |
+        &#123; <a target="_blank" href="/media/pdf/atm.pdf">paper</a>,
+        <a target="_blank" href="https://arxiv.org/abs/2401.00025" >arXiv</a>,
+        <a target="_blank" href="https://xingyu-lin.github.io/atm/">website</a>,
         <a target="_blank" href="https://github.com/Large-Trajectory-Model/ATM">code</a> &#125;
       </p>
     </div>
-    <a target="_blank" href="https://xingyu-lin.github.io/atm/">
-      <div class="project-media">
-        <video src="/media/vid/atm.mp4" autoplay muted inline loop>
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <a target="_blank" href="https://xingyu-lin.github.io/atm/" class="no-hover">
+      <video class="project-media" src="/media/vid/atm.mp4" autoplay muted inline loop>
+        Your browser does not support the video tag.
+      </video>
     </a>
   </div>
   <div class="subsection">
-    <div class="text-container">
+    <div class="text-container project-text">
       <h3>SpawnNet: Learning Generalizable Visuomotor Skills from Pre-trained Networks</h3>
       <p>
         <a target="_blank" href="https://xingyu-lin.github.io/">Xingyu Lin</a>*,
@@ -104,26 +102,24 @@ title: joso
         <a target="_blank" href="https://people.eecs.berkeley.edu/~pabbeel/">Pieter Abbeel</a>
       </p>
       <p>
-        We propose a novel method to adapt dense features from pre-trained vision backbones for sample-efficienct policy learning and generalization to unseen objects.
+        <strong>TL;DR:</strong> We propose a method to adapt dense features from pre-trained vision backbones for visuomotor policies, enabling sample-efficient generalization to unseen objects.
       </p>
       <p>
         <span class="badge conference"><b>ICRA 2024</b></span>
-        &#123; <a target="_blank" href="/media/pdf/spawnnet.pdf">paper</a> |
-        <a target="_blank" href="https://arxiv.org/abs/2307.03567" >arXiv</a> |
-        <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/">website</a> |
+        &#123; <a target="_blank" href="/media/pdf/spawnnet.pdf">paper</a>,
+        <a target="_blank" href="https://arxiv.org/abs/2307.03567" >arXiv</a>,
+        <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/">website</a>,
         <a target="_blank" href="https://github.com/johnrso/spawnnet">code</a> &#125;
       </p>
     </div>
-    <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/">
-      <div class="project-media">
-        <video src="/media/vid/spawnnet.mp4" autoplay muted inline loop>
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <a target="_blank" href="https://xingyu-lin.github.io/spawnnet/" class="no-hover">
+      <video class="project-media" src="/media/vid/spawnnet.mp4" autoplay muted inline loop>
+        Your browser does not support the video tag.
+      </video>
     </a>
   </div>
   <div class="subsection">
-    <div class="text-container">
+    <div class="text-container project-text">
       <h3>Sim-to-Real via Sim-to-Seg: End-to-end Off-road Autonomous Driving Without Real Data</h3>
       <p>
         <b><u>John So</u></b>*,
@@ -136,22 +132,20 @@ title: joso
         <a target="_blank" href="https://stepjam.github.io/" >Stephen James</a>
       </p>
       <p>
-        We learn a segmentation model, train a navigation policy in simulation with RL in learned segmentation space, and deploy zero-shot to a real vehicle.
+        <strong>TL;DR:</strong> We train a navigation policy in simulation with RL in learned segmentation space, and deploy zero-shot to a real vehicle.
       </p>
       <p>
         <span class="badge conference"><b>CoRL 2022</b></span>
-        &#123; <a target="_blank" href="/media/pdf/sim-to-seg.pdf" >paper</a> |
-        <a target="_blank" href="https://arxiv.org/abs/2210.14721">arXiv</a> |
-        <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home">website</a> |
+        &#123; <a target="_blank" href="/media/pdf/sim-to-seg.pdf" >paper</a>,
+        <a target="_blank" href="https://arxiv.org/abs/2210.14721">arXiv</a>,
+        <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home">website</a>,
         <a target="_blank" href="https://github.com/rll-research/sim2seg">code</a> &#125;
       </p>
     </div>
-    <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home">
-      <div class="project-media">
-        <video src="/media/vid/sim2seg.mp4" autoplay muted inline loop>
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <a target="_blank" href="https://sites.google.com/view/sim2segcorl2022/home" class="no-hover">
+      <video class="project-media" src="/media/vid/sim2seg.mp4" autoplay muted inline loop>
+        Your browser does not support the video tag.
+      </video>
     </a>
   </div>
 </div>
@@ -161,10 +155,12 @@ title: joso
   </div>
   <div class="subsection">
     <div class="text-container">
-      <p><a target="_blank" href="https://cs229.stanford.edu/">CS 229: Machine Learning</a> — Winter 2024, Winter 2025</p>
-      <p><a target="_blank" href="https://cs221.stanford.edu/">CS 221: Artificial Intelligence: Principles and Techniques</a> — Fall 2024</p>
-      <p><a target="_blank" href="https://people.eecs.berkeley.edu/~jrs/189/">CS 189: Introduction to Machine Learning</a> — Spring 2023</p>
-      <p><a target="_blank" href="https://cs61a.org/">CS 61A: Structure and Interpretation of Computer Programs</a> — Fall 2022, Spring 2022, Fall 2021</p>
+      <p class="last-p">
+        <a target="_blank" href="https://cs229.stanford.edu/">CS 229: Machine Learning</a> — Winter 2025, Winter 2024 <br>
+        <a target="_blank" href="https://cs221.stanford.edu/">CS 221: Artificial Intelligence: Principles and Techniques</a> — Fall 2024 <br>
+        <a target="_blank" href="https://people.eecs.berkeley.edu/~jrs/189/">CS 189: Introduction to Machine Learning</a> — Spring 2023 <br>
+        <a target="_blank" href="https://cs61a.org/">CS 61A: Structure and Interpretation of Computer Programs</a> — Fall 2022, Spring 2022, Fall 2021
+      </p>
     </div>
   </div>
 </div>
@@ -175,20 +171,22 @@ title: joso
   <div class="subsection">
     <div class="text-container">
       <p>
-        As an undergrad, I spent the majority of my time outside of research helping to build, organize, and
-        lead <a target="_blank" href="https://ml.berkeley.edu/" >Machine Learning at Berkeley (ML@B)</a>,
+        I'm forever grateful to the communities which raised me, notably <a target="_blank" href="https://ml.berkeley.edu/">Machine Learning at Berkeley (ML@B)</a>, <a target="_blank" href="https://cs61a.org/">61A Staff</a>, <a target="_blank" href="https://eecs.berkeley.edu/resources/undergrads/accel/">Accel Scholars</a>, and <a target="_blank" href="https://www.felicis.com/fellows">Felicis Fellows</a>.
+      </p>
+      <p>
+        In particular, I spent the majority of my undergrad learning from and organizing
+        <a target="_blank" href="https://ml.berkeley.edu/" >ML@B</a>,
         serving as the organization's president in Fall 2022. We presented a white paper about our structure
         and initiatives at the NeurIPS 2022 <a target="_blank" href="https://sites.google.com/view/broadening-collaboration-in-ml/home">Broadening Research Collaborations in ML Workshop</a>;
         you may find a preprint <a target="_blank" href="/media/pdf/built_to_last.pdf">here</a>.
       </p>
-      <br>
-      <p>
-        I'm forever grateful to the communities which raised me: <a target="_blank" href="https://ml.berkeley.edu/">ML@B</a>, <a target="_blank" href="https://csmentors.studentorg.berkeley.edu/">CSM</a>, <a target="_blank" href="https://eecs.berkeley.edu/resources/undergrads/accel/">Accel Scholars</a>, and <a target="_blank" href="https://www.felicis.com/fellows">Felicis Fellows</a>.
+      <p class="last-p">
+        Sometimes, I <a target="_blank" href="blog.html">write my thoughts down</a>! Generally, I like to think about how to best teach, learn, and optimize for fulfillment; shoot me an email or DM if you'd like to chat :)
       </p>
     </div>
   </div>
 </div>
 
 <div class="section footer">
-  <p>last updated: {{ site.time | date_to_string }} | <a href="#">&#128640;</a></p>
+  <p>last updated: {{ site.time | date_to_string }}<a href="#">&#128640;</a></p>
 </div>
