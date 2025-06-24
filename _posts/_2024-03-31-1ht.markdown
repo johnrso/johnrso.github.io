@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "one hour thoughts"
+keywords: courage, 
+date:   2024-03-24 13:32:03 -0700
+categories: jekyll update
+
+---
+notions of running away; courage
+
+mbti and other personality tests as scaffolds for understanding
+perceiving and being perceived
+___
+
+_on the idea stack:_ \
+the formula for physical AGI (human intelligence); \
+learning latent dynamics . \

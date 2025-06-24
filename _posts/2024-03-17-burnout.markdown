@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "one hour thoughts on purpose"
+title:  "reflections on burnout"
 keywords: burnout, mindset
 date:   2024-03-17 13:32:03 -0700
 categories: jekyll update
 
 ---
+
 A short and informal life update: I have made the executive decision to start a blog! I mainly want to run this as a combination of a research journal, readings, and thoughts as they come up. The past few months have really changed how I view the world and myself, and I want to capture the metamorphosis of my thoughts as they happen.
 \
 \
