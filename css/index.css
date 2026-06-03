@@ -63,6 +63,19 @@ h2 hr {
   border: none;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background-color: rgb(205, 205, 202);
+  opacity: 0.35;
+  margin: 12px 10px;
+}
+
+.light hr {
+  background-color: rgb(26, 24, 24);
+  opacity: 0.2;
+}
+
 p, ol, ul {
   margin: 0px 0 12px 0;
   color: inherit;
@@ -70,9 +83,6 @@ p, ol, ul {
 
 .project-text p {
   margin: 0 0 2px 0;
-}
-.project-text h3 {
-  margin: -5px 0 2px 0;
 }
 
 .title-text p {
@@ -158,7 +168,7 @@ b, strong {
 .project-media {
   margin: 10px;
   width: 100%;
-  max-width: 200px;
+  max-width: 175px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -222,8 +232,6 @@ b, strong {
   flex: 100;
   min-width: 250px;
   display: flex;
-  text-align: justify;
-  text-justify: inter-word;
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
@@ -243,6 +251,80 @@ b, strong {
   justify-content: center;
   width: 100%;
   margin-bottom: 5px;
+}
+
+.subsection.project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.subsection.project .project-content {
+  display: contents;
+}
+
+.subsection.project h3 {
+  order: 1;
+  margin: -5px 10px 2px 10px;
+}
+
+.subsection.project > a {
+  order: 2;
+  align-self: center;
+}
+
+.subsection.project .project-text {
+  order: 3;
+  margin: 0 10px;
+}
+
+@media (min-width: 600px) {
+  .subsection.project {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .section > hr {
+    margin: 4px 10px;
+  }
+
+  .subsection.project .project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 250px;
+  }
+
+  .subsection.project > a {
+    flex: 0 0 175px;
+    width: 175px;
+    align-self: center;
+    margin: 10px;
+  }
+
+  .subsection.project .project-media {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .subsection.project h3 {
+    margin: -5px 0 2px 0;
+  }
+
+  .subsection.project .project-text {
+    margin: 0;
+  }
+
+  .subsection.project h3,
+  .subsection.project > a,
+  .subsection.project .project-text {
+    order: unset;
+  }
 }
 
 

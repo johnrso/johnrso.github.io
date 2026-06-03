@@ -15,7 +15,9 @@ title: joso journal
   <p>A very informal collection of things I've made and thoughts I've thought.</p>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.keywords }})</li>
+      <li>
+        <span class="post-date">{{ post.date | date_to_string }}</span><span class="post-entry"> &raquo; <a href="{{ post.url }}">{{ post.title }}</a> ({{ post.keywords }})</span>
+      </li>
     {% endfor %}
   </ul>
 </div>
