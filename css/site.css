@@ -1,0 +1,413 @@
+/* themes: one per headshot, picked by data-theme on <html> */
+
+:root {
+  --bg: rgb(255, 255, 252);
+  --fg: rgb(26, 24, 24);
+  --link: rgb(20, 120, 20);
+  --rule: rgba(26, 24, 24, 0.2);
+  --media-border: rgb(200, 200, 200);
+  --badge-bg: rgb(200, 235, 200);
+  --badge-fg: rgb(20, 120, 20);
+  --muted: rgb(125, 125, 125);
+  --muted-hover: rgb(150, 150, 150);
+  color-scheme: light;
+}
+
+[data-theme="sky"] {
+  --bg: #f7f9fc;
+  --fg: #1a1d24;
+  --link: #2f6fb5;
+  --rule: rgba(47, 111, 181, 0.2);
+  --media-border: rgb(200, 210, 225);
+  --badge-bg: #dce8f5;
+  --badge-fg: #2f6fb5;
+  --muted: #5f6b7a;
+  --muted-hover: #7a8696;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Joso Hand';
+  src: url('/media/font/JosoHand-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Joso Hand';
+  src: url('/media/font/JosoHand-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Joso Hand';
+  src: url('/media/font/JosoHand-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'EB Garamond', 'Garamond', serif;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.01);
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+h1, h2 {
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/* section headings end in a rule */
+.section h2 {
+  display: flex;
+  align-items: center;
+}
+
+.section h2::after {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  margin: 0 10px 0 12px;
+  background-color: var(--rule);
+}
+
+h3 {
+  font-size: 20px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--rule);
+  margin: 12px 10px;
+}
+
+p, ol, ul {
+  margin: 0 0 12px 0;
+}
+
+ol, ul {
+  padding-left: 20px;
+}
+
+.project-text p,
+.title-text p {
+  margin: 0 0 2px 0;
+}
+
+.last-p {
+  margin-bottom: 0;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+a:not(.no-hover)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: var(--link);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease;
+}
+
+a:not(.no-hover):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* layout */
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.text-container {
+  flex: 100;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.subsection {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.title-text {
+  margin-top: 5px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+/* headshots: the theme picks which one is shown; sketch mode swaps in its pencil version */
+
+.headshot {
+  display: none;
+}
+
+.headshot img {
+  display: block;
+  width: 110px;
+  height: 110px;
+  border-radius: 3px;
+}
+
+html:not([data-theme]) .headshot-green,
+[data-theme="green"] .headshot-green,
+[data-theme="sky"] .headshot-sky {
+  display: block;
+}
+
+.headshot .sketch,
+[data-sketch] .headshot .photo {
+  display: none;
+}
+
+[data-sketch] .headshot .sketch {
+  display: block;
+}
+
+/* sketch mode (easter egg: click any page title) */
+
+[data-sketch] body {
+  font-family: 'Joso Hand', 'EB Garamond', 'Garamond', serif;
+}
+
+/* separators become a wobbly pen line: the theme color shows through a hand-drawn SVG mask */
+[data-sketch] {
+  /* one long hand-drawn stroke (no repeating tile), stretched to each line's width */
+  --sketch-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='6' viewBox='0 0 1000 6' preserveAspectRatio='none'%3E%3Cpath d='M0 3.00 C4 2.98 14 2.93 21 2.88 C28 2.83 35 2.75 43 2.69 C50 2.63 57 2.56 64 2.52 C71 2.49 78 2.47 85 2.49 C92 2.52 99 2.59 106 2.66 C113 2.72 121 2.84 128 2.91 C135 2.98 142 3.04 149 3.06 C156 3.09 163 3.06 170 3.06 C177 3.05 184 3.03 191 3.03 C199 3.02 206 3.04 213 3.05 C220 3.05 227 3.05 234 3.03 C241 3.02 248 2.97 255 2.94 C262 2.91 270 2.87 277 2.84 C284 2.80 291 2.79 298 2.76 C305 2.72 312 2.68 319 2.61 C326 2.53 333 2.42 340 2.32 C348 2.21 355 2.07 362 1.96 C369 1.86 376 1.75 383 1.69 C390 1.63 397 1.59 404 1.60 C411 1.61 418 1.66 426 1.73 C433 1.80 440 1.91 447 2.01 C454 2.10 461 2.23 468 2.32 C475 2.41 482 2.50 489 2.54 C496 2.57 504 2.56 511 2.52 C518 2.49 525 2.37 532 2.31 C539 2.25 546 2.16 553 2.14 C560 2.12 567 2.16 574 2.19 C582 2.22 589 2.31 596 2.34 C603 2.37 610 2.38 617 2.37 C624 2.36 631 2.31 638 2.28 C645 2.26 652 2.23 660 2.24 C667 2.25 674 2.29 681 2.35 C688 2.40 695 2.50 702 2.57 C709 2.65 716 2.73 723 2.79 C730 2.85 738 2.90 745 2.94 C752 2.97 759 3.00 766 3.01 C773 3.03 780 3.03 787 3.03 C794 3.03 801 3.00 809 2.99 C816 2.97 823 2.94 830 2.92 C837 2.89 844 2.87 851 2.85 C858 2.83 865 2.80 872 2.79 C879 2.78 887 2.79 894 2.81 C901 2.83 908 2.88 915 2.91 C922 2.94 929 2.98 936 3.01 C943 3.03 950 3.04 957 3.06 C965 3.07 972 3.09 979 3.11 C986 3.13 996 3.16 1000 3.17' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
+}
+
+[data-sketch] hr,
+[data-sketch] .section h2::after {
+  height: 6px;
+  background-color: var(--link);   /* theme-colored pen line */
+  opacity: 0.55;
+  -webkit-mask: var(--sketch-line) center / 100% 6px no-repeat;
+  mask: var(--sketch-line) center / 100% 6px no-repeat;
+}
+
+[data-sketch] hr {
+  margin: 9.5px 10px;          /* 6px tall instead of 1px: keep the same total height */
+}
+
+.sketch-toggle {
+  cursor: pointer;
+}
+
+/* projects */
+
+.project-media {
+  display: block;
+  margin: 10px;
+  width: 100%;
+  max-width: 175px;
+  border-radius: 6px;
+  border: 0.5px solid var(--media-border);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0 8px;
+  margin-top: 4px;
+  margin-right: 5px;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: var(--badge-bg);
+  color: var(--badge-fg);
+}
+
+.subsection.project {
+  flex-direction: column;
+}
+
+.subsection.project .project-content {
+  display: contents;
+}
+
+.subsection.project h3 {
+  order: 1;
+  margin: -5px 10px 2px 10px;
+}
+
+.subsection.project > a {
+  order: 2;
+  align-self: center;
+}
+
+.subsection.project .project-text {
+  order: 3;
+  margin: 0 10px;
+}
+
+@media (min-width: 600px) {
+  .subsection.project {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+
+  .section > hr {
+    margin: 4px 10px;
+  }
+
+  .subsection.project .project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 250px;
+  }
+
+  .subsection.project > a {
+    flex: 0 0 175px;
+    width: 175px;
+    margin: 10px;
+  }
+
+  .subsection.project .project-media {
+    max-width: none;
+    margin: 0;
+  }
+
+  .subsection.project h3 {
+    margin: -5px 0 2px 0;
+  }
+
+  .subsection.project .project-text {
+    margin: 0;
+  }
+
+  .subsection.project h3,
+  .subsection.project > a,
+  .subsection.project .project-text {
+    order: unset;
+  }
+}
+
+/* blog */
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.posts {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.posts li {
+  margin-bottom: 2px;
+  transition: transform 0.2s ease;
+}
+
+.posts li:hover {
+  transform: translateX(4px);
+}
+
+.post-date {
+  display: inline-block;
+  width: 12ch;
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.2s ease;
+  vertical-align: top;
+}
+
+.posts li:hover .post-date {
+  color: var(--muted-hover);
+}
+
+/* tags */
+
+.badge.tag {
+  font-size: 14px;
+  margin: 0 0 0 6px;
+  vertical-align: 1px;
+}
+
+.tag-chip {
+  display: inline-block;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+.tag-chip.active {
+  background-color: var(--badge-bg);
+  color: var(--badge-fg);
+}
