@@ -1,4 +1,4 @@
-/* theme */
+/* themes: one per headshot, picked by data-theme on <html> */
 
 :root {
   --bg: rgb(255, 255, 252);
@@ -8,6 +8,26 @@
   --media-border: rgb(200, 200, 200);
   --badge-bg: rgb(200, 235, 200);
   --badge-fg: rgb(20, 120, 20);
+}
+
+[data-theme="sky"] {
+  --bg: #f7f9fc;
+  --fg: #1a1d24;
+  --link: #2f6fb5;
+  --rule: rgba(47, 111, 181, 0.2);
+  --media-border: rgb(200, 210, 225);
+  --badge-bg: #f3e3b8;
+  --badge-fg: #8a6512;
+}
+
+[data-theme="night"] {
+  --bg: #1c1814;
+  --fg: #e6ddd0;
+  --link: #d9a066;
+  --rule: rgba(217, 160, 102, 0.3);
+  --media-border: rgb(70, 60, 50);
+  --badge-bg: #4a3524;
+  --badge-fg: #e8b980;
 }
 
 * {
@@ -171,13 +191,20 @@ a:not(.no-hover):hover::after {
   margin-left: 8px;
 }
 
-/* headshot */
+/* headshots: only the one matching the theme is shown */
 
 .headshot {
-  display: block;
+  display: none;
   width: 110px;
   height: 110px;
   border-radius: 3px;
+}
+
+html:not([data-theme]) .headshot-green,
+[data-theme="green"] .headshot-green,
+[data-theme="sky"] .headshot-sky,
+[data-theme="night"] .headshot-night {
+  display: block;
 }
 
 /* projects */
