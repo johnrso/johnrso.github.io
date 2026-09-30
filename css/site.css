@@ -240,33 +240,6 @@ html:not([data-theme]) .headshot-green,
 
 [data-sketch] body {
   font-family: 'Joso Hand', 'EB Garamond', 'Garamond', serif;
-  /* bullet-journal dot grid, one row per line of text. The dot sits mid-tile, so shift
-     the tiles up half a row: dots land at exact multiples of the line height, where
-     snapToGrid() (default layout) puts every text baseline. */
-  --grid: calc(18px * 1.3);
-  background-image: radial-gradient(circle, color-mix(in srgb, var(--fg) 28%, transparent) 1.1px, transparent 1.6px);
-  background-size: var(--grid) var(--grid);
-  background-position: center calc(var(--grid) / -2);
-}
-
-/* let text stack from the top (no stretched gaps) and keep wrapped titles on the grid */
-[data-sketch] .text-container {
-  justify-content: flex-start;
-}
-
-[data-sketch] h3 {
-  line-height: var(--grid);
-}
-
-/* tightly stacked lines (header info, project details) go on consecutive rows */
-[data-sketch] .title-text p,
-[data-sketch] .project-text p,
-[data-sketch] .subsection.project h3 {
-  margin-bottom: 0;
-}
-
-[data-sketch] .badge {
-  margin-top: 0;               /* a taller line would get snapped a whole row down */
 }
 
 /* separators become a wobbly pen line: the theme color shows through a hand-drawn SVG mask */
